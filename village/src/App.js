@@ -13,7 +13,7 @@ class App extends Component {
       activeSmurf: null
     };
   }
-  componentDidMount() {
+  componentDidUpdate() {
     axios
       .get("http://localhost:3333/smurfs")
       .then(res => this.setState({ smurfs: res.data }))
@@ -22,6 +22,7 @@ class App extends Component {
   }
 
   addSmurf = smurf => {
+    document.location.reload();
     axios
       .post("http://localhost:3333/smurfs", smurf)
       .then(res => {
