@@ -1,3 +1,82 @@
 .App {
   text-align: center;
 }
+
+.SmurfBox {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.SmurfBox > div {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.Smurf {
+  border: 1px solid black;
+  margin: 20;
+}
+
+.SmurfButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.SmurfButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.SmurfButton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.SmurfButton:hover span {
+  padding-right: 25px;
+}
+
+.SmurfButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.SmurfForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 40%;
+}
+
+.SmurfForm > input {
+  margin: 6px 0;
+  height: 35px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.SmurfForm > button {
+  height: 30px;
+  border-radius: 15px;
+  margin: 10px;
+}
